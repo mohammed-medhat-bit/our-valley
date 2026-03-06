@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مكاننا السري</title>
+  <style>
+  body {
+    background-color: #1a1a1a; /* لون أسود أوبسيديان هادي */
+    color: #e0e0e0; /* لون كتابة فاتح مريح */
+    font-family: sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  h1 {
+    color: #ffd700; /* لون دهبي خفيف للعنوان */
+    text-align: center;
+  }
+  hr {
+    border: 0.5px solid #444;
+  }
+  img {
+  max-width: 100%; /* عشان الصورة متطلعش بره شاشة الموبايل */
+  border-radius: 15px; /* عشان الحواف تكون ناعمة ومريحة للعين */
+  border: 2px solid #ffd700; /* إطار دهبي رفيع يليق مع الأوبسيديان */
+  margin-top: 10px;
+}
+/* تنسيق حاوية الصوت */
+
+.audio-card {
+    background: linear-gradient(145deg, #1a1a1a, #2c1a1a); /* تداخل بسيط مع اللون الأحمر الداكن (لون النار الهادية) */
+    border: 1px solid #ff4500; /* لون برتقالي محروق بدل الدهبي عشان الأغنية */
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(255, 69, 0, 0.1); /* توهج خفيف بلون النار */
+}
+
+.audio-card h3 {
+    color: #ff4500;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+}
+
+/* حركة ذكية: جعل المشغل يبدو شفافاً ويندمج مع الخلفية */
+audio {
+    width: 100%; /* العرض كامل جوه الكارت */
+    max-width: 280px; /* عشان ميبقاش ضخم بزيادة على الموبايل */
+    height: 45px;
+    outline: none;
+    filter: invert(100%) hue-rotate(180deg) brightness(1.2); 
+    display: block; /* نخليه عنصر مستقل */
+}
+
+
+
+/* تنسيق صور الألعاب */
+.game-img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 15px;
+    border: 2px solid #444;
+    transition: transform 0.3s ease; /* حركة انسيابية لما تلمس الصورة */
+}
+
+.game-img:hover {
+    transform: scale(1.05); /* تكبير بسيط للصورة */
+    border-color: #ffd700;
+}
+
+</style>
+
+</head>
+<body>
+
+    <h1 align="center">مرحباً بكِ في وادي الأمان</h1>
+
+    <hr>
+
+  <br>
+
+  <div class="audio-card">
+    <h3>هدية صغيرة:</h3>
+    <audio controls loop>
+        <source src="audios/камин.m4a" type="audio/mp4">
+        متصفحك لا يدعم تشغيل الصوت.
+    </audio>
+    <p style="font-size: 0.8rem; margin-top: 10px; color: #888;">اضغطي Play للدخول في وادي الأمان...</p>
+</div>
+
+    <p>هذا المكان بُني خصيصاً لأجل نور<br>لأجل بناء ذكريات تُخلّد إلى الأبد من أجل حاضر هادئ ومستقبل جميل</p>
+
+    <h3>لماذا نحن هنا؟</h3>
+    <p>لتوثيق ذكرياتنا الجميلة والابتعاد عن ضجيج العالم والدخول إلى عالمنا الخاص بعيداً عن صياح البشر</p>
+    <br>
+    <h3>لعبة الـ3 صور</h3>
+    
+    <h3>اللوحة السينمائية</h3>
+    
+    <h3>كان يا ماكان</h3>
+    
+
+    <hr>
+
+    <p>تمت برمجة هذه الصفحة بكل فخر بواسطة: <b>محمد بن مدحت</b></p>
+
+</body>
+</html>
