@@ -20,12 +20,19 @@
   hr {
     border: 0.5px solid #444;
   }
-  img {
-  max-width: 100%; /* عشان الصورة متطلعش بره شاشة الموبايل */
-  border-radius: 15px; /* عشان الحواف تكون ناعمة ومريحة للعين */
-  border: 2px solid #ffd700; /* إطار دهبي رفيع يليق مع الأوبسيديان */
-  margin-top: 10px;
+  .memory-gallery {
+    padding: 50px 10px;
+    background-color: #ffffff;
 }
+
+/* تنسيق الأبسيديان الفخم */
+.memory-gallery {
+    padding: 60px 15px;
+    background-color: #0b0d0f; /* أسود أبسيدياني عميق */
+    color: #e0e0e0;
+    text-align: center;
+}
+
 /* تنسيق حاوية الصوت */
 
 .audio-card {
@@ -53,21 +60,68 @@ audio {
     display: block; /* نخليه عنصر مستقل */
 }
 
-
-
-/* تنسيق صور الألعاب */
-.game-img {
+/* الحاوية الكبرى */
+.memory-gallery {
+    padding: 40px 10px;
+    background-color: #0b0d0f; /* الأسود الأبسيدياني */
     width: 100%;
-    max-width: 300px;
-    border-radius: 15px;
-    border: 2px solid #444;
-    transition: transform 0.3s ease; /* حركة انسيابية لما تلمس الصورة */
+    box-sizing: border-box;
+    overflow-x: hidden;
 }
 
-.game-img:hover {
-    transform: scale(1.05); /* تكبير بسيط للصورة */
-    border-color: #ffd700;
+/* نظام الشبكة (Grid) المعدل */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap; /* السحر هنا: عشان لما يخلصوا صورتين ينزلوا تحت */
+    gap: 10px; /* المسافة بين الصورتين */
+    justify-content: center; /* توسيط الصور في الشاشة */
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
 }
+
+.memory-card {
+    background: #1a1d21;
+    border: 1px solid #2d3436;
+    border-radius: 12px;
+    overflow: hidden;
+    /* الحسبة دي بتخلي كل كارت ياخد نص العرض ناقص المسافة (Gap) */
+    width: calc(50% - 10px); 
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+/* لضمان إن الصور تملى الكارت وماتخرجش */
+.memory-card img {
+    width: 100% !important;
+    height: 200px; /* ارتفاع موحد عشان الصفوف تطلع متساوية */
+    object-fit: cover; /* لقص الصور بشكل احترافي ومنع التمطيط */
+    display: block;
+}
+
+.card-info {
+    padding: 10px;
+    background: #1a1d21;
+    text-align: right;
+    border-top: 1px solid #2d3436;
+}
+
+.card-info p {
+    font-family: 'Cairo', sans-serif;
+    color: #b2bec3;
+    margin: 0;
+    font-size: 0.8rem; /* تصغير الخط شوية عشان يناسب المساحة الجديدة */
+    line-height: 1.4;
+}
+
+/* تعديل للموبايلات الصغيرة جداً عشان الكلام ميزحمش */
+@media (max-width: 350px) {
+    .memory-card {
+        width: 100%; /* ترجع صورة واحدة في الصف لو الشاشة ضيقة جداً */
+    }
+}
+
 
 </style>
 
@@ -95,7 +149,46 @@ audio {
     <p>لتوثيق ذكرياتنا الجميلة والابتعاد عن ضجيج العالم والدخول إلى عالمنا الخاص بعيداً عن صياح البشر</p>
     <br>
     <h3>لعبة الـ3 صور</h3>
+
+    <section class="memory-gallery">
+    <h2 class="section-title">أجمل ما رأينا اليوم ✨
+    8/3/2026</h2>
     
+    <div class="gallery-grid">
+        <div class="memory-card hers">
+            <img src="images/the_palace_1.jpg" alt="Baron Palace1">
+            <div class="card-info">
+            </div>
+        </div>
+        <div class="memory-card hers">
+            <img src="images/the_palace_2.jpg" alt="Baron palace 2">
+            <div class="card-info">
+            </div>
+        </div>
+        <div class="memory-card hers">
+            <img src="images/flowers.jpg" alt="lantana flowers">
+            <div class="card-info">
+            </div>
+        </div>
+
+        <div class="memory-card mine">
+            <img src="images/African_Daisy.jpg" alt="African Daisy flowers">
+            <div class="card-info">
+            </div>
+        </div>
+        <div class="memory-card mine">
+            <img src="images/faculty_of_engineering.jpg" alt="faculty of engineering">
+            <div class="card-info">
+            </div>
+        </div>
+        <div class="memory-card mine">
+            <img src="images/faculty_of_science.jpg" alt="faculty of science">
+            <div class="card-info">
+            </div>
+        </div>
+    </div>
+</section>
+
     <h3>اللوحة السينمائية</h3>
     
     <h3>كان يا ماكان</h3>
